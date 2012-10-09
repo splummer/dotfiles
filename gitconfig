@@ -1,0 +1,14 @@
+[user]
+	name = Shawn Plummer
+	email = smplummer@gmail.com
+[github]
+	user = splummer
+	token = 75aeedf2c2ffa2009b84ec024f648c06
+[core]
+	quotepath = false
+	excludesfile = /Users/plummer/.gitignore_global
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
