@@ -17,8 +17,6 @@ set autoindent                  " always set autoindenting on
 set pastetoggle=<F2>            "Allow pasting of large blocks of text without indenting
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set history=1000
-set backupdir=~/.tmp            " set backup directory to ~/.tmp
-set directory=~/.tmp
 set autoread                    " automatically updates file when editted outside vim
 set report=0 			"show report on changes to file, 0 means all changes
 "set statusline=%<%f\ %h%m%r%=%-20.(line=%l,col=%c%V,totlin=%L%)\%h%m%r%=%-40(,%n%Y%)\%P "Status line
