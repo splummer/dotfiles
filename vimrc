@@ -16,8 +16,6 @@ set autoindent                  " always set autoindenting on
 set pastetoggle=<F2>            "Allow pasting of large blocks of text without indenting
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set history=1000
-set undodir=~/.tmp/undodir      " set undo file location
-set undofile
 set backupdir=~/.tmp            " set backup directory to ~/.tmp
 set directory=~/.tmp
 set autoread                    " automatically updates file when editted outside vim
