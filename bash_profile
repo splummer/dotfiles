@@ -38,3 +38,8 @@ fi
 if [ -d /usr/local/sbin ] ; then
 	PATH="/usr/local/sbin:${PATH}"
 fi
+
+HOSTNAME=$(hostname)
+if [ "${HOSTNAME:0:6}" != "tools" ]; then
+	case "$-" in *i*) byobu-launcher && exit 0; esac;
+fi
