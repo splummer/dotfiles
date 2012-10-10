@@ -87,7 +87,7 @@ Finally, to enable the hidden command line tool `subl` add this symlink:
 
 ## Other Tips, Tricks, and Miscellany
 
-Much of what I fond was copied from the following sources
+Much of what I did was copied from the following sources
 
   * https://github.com/zan5hin/dotfiles
   * http://seanmmcdaniel.com/2011/09/zsh-on-os-x/
