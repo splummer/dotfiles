@@ -38,7 +38,6 @@ set report=0 "show report on changes to file, 0 means all changes
  Bundle 'L9'
  Bundle 'FuzzyFinder'
  " non github repos
- Bundle 'git://git.wincent.com/command-t.git'
  " ...
 
  filetype plugin indent on     " required!
