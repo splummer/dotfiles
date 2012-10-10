@@ -1,4 +1,4 @@
-syntax on
+syntax enable
 set nocp 			"We want to use vim not vi
 set nocompatible 		"be iMproved
 set laststatus=2   		" Always show the statusline
