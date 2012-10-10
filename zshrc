@@ -48,6 +48,7 @@ PATH=/opt/local/libexec/gnubin:$PATH	# MacPorts gnu coreutils links
 export PATH
 
 export EDITOR=vim # Set editor to vim for things that care
+export PAGER=less # Less is better than more
 
 # Color listing
 eval $(dircolors ~/.dir_colors)
