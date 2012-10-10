@@ -53,18 +53,14 @@ export EDITOR=vim # Set editor to vim for things that care
 eval $(dircolors ~/.dir_colors)
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
+# -------------------------------------------------------------------
+# source my aliases and functions
+# -------------------------------------------------------------------
+source ${HOME}/.dotfiles/aliases.zsh
+source ${HOME}/.dotfiles/functions.zsh
+
 # List directory contents after a 'cd'
 function chpwd() {
      emulate -LR zsh
          ls -F
          }
-
-# -------------------------------------------------------------------
-# Functions 
-# -------------------------------------------------------------------
-# view man pages in Preview
-function pman() { ps=`mktemp -t manpageXXXX`.ps ; man -t $@ > "$ps" ; open "$ps" ; }
-
-# nice mount (http://catonmat.net/blog/another-ten-one-liners-from-commandlingfu-explained)
-# displays mounted drive information in a nicely formatted manner
-function nicemount() { (echo "DEVICE PATH TYPE FLAGS" && mount | awk '$2="";1') | column -t ; }
