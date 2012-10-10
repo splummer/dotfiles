@@ -1,12 +1,13 @@
+# -------------------------------------------------------------------
+# Functions 
+# -------------------------------------------------------------------
+
 # List directory contents after a 'cd'
 function chpwd() {
      emulate -LR zsh
          ls -F
          }
 
-# -------------------------------------------------------------------
-# Functions 
-# -------------------------------------------------------------------
 # view man pages in Preview
 function pman() { ps=`mktemp -t manpageXXXX`.ps ; man -t $@ > "$ps" ; open "$ps" ; }
 
