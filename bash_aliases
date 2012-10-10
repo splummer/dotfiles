@@ -7,7 +7,6 @@
 # -------------------------------------------------------------------
 # My General purpose aliases
 # -------------------------------------------------------------------
-alias -='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias 1='cd -'
@@ -25,9 +24,7 @@ alias cd..='cd ..'
 alias cd...='cd ../..'
 alias cd....='cd ../../..'
 alias cd.....='cd ../../../..'
-alias cd/='cd /'
 export LS_OPTIONS='--color'
-alias lh='ls $LS_OPTIONS -aF | egrep "^\."'
 alias ls='ls $LS_OPTIONS -F'
 alias lsa='ls $LS_OPTIONS -lahF'
 alias l='ls $LS_OPTIONS -laF'
