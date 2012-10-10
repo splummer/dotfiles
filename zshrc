@@ -29,7 +29,7 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx macports)
+plugins=(git osx macports yum)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -58,9 +58,3 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # -------------------------------------------------------------------
 source ${HOME}/.dotfiles/aliases.zsh
 source ${HOME}/.dotfiles/functions.zsh
-
-# List directory contents after a 'cd'
-function chpwd() {
-     emulate -LR zsh
-         ls -F
-         }
