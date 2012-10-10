@@ -50,7 +50,22 @@ if [ -d /usr/local/bin ] ; then
 	PATH="/usr/local/bin:${PATH}"
 fi
 
+# set PATH so it includes /opt/local/bin if it exists
+if [ -d /opt/local/bin ] ; then
+	PATH="/opt/local/bin:${PATH}"
+fi
+
+# set PATH so it includes /opt/local/sbin if it exists
+if [ -d /opt/local/sbin ] ; then
+	PATH="/opt/local/sbin:${PATH}"
+fi
+
+# set PATH so it includes /opt/local/libexec/gnubin if it exists
+if [ -d /opt/local/libexec/gnubin ] ; then
+	PATH="/opt/local/libexec/gnubin:${PATH}"
+fi
+
 HOSTNAME=$(hostname)
-if [ "${HOSTNAME:0:6}" != "tools" ]; then
+if [ "${HOSTNAME:0:6}" == "tools" ]; then
 	case "$-" in *i*) byobu-launcher && exit 0; esac;
 fi
