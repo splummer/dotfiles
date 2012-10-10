@@ -12,6 +12,7 @@ set showcmd "Show uncompleted command
 set showmatch "Show matching parenthesis
 set showmode "Show current mode
 set ruler "show current position
+set pastetoggle=<F2> "Allow pasting of large blocks of text without indenting
 set report=0 "show report on changes to file, 0 means all changes
 "set statusline=%<%f\ %h%m%r%=%-20.(line=%l,col=%c%V,totlin=%L%)\%h%m%r%=%-40(,%n%Y%)\%P "Status line
 
