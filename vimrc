@@ -43,8 +43,6 @@ set report=0 			"show report on changes to file, 0 means all changes
  Bundle 'vim-colors-solarized'
  Bundle 'vim-powerline'
  " vim-scripts repos
- Bundle 'L9'
- Bundle 'FuzzyFinder'
  " non github repos
  " ...
 
