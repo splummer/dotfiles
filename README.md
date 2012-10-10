@@ -91,3 +91,7 @@ Much of what I did was copied from the following sources
 
   * https://github.com/zan5hin/dotfiles
   * http://seanmmcdaniel.com/2011/09/zsh-on-os-x/
+
+### Fonts
+
+  * https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
