@@ -22,6 +22,7 @@ fi
 
 # -------------------------------------------------------------------
 # Build a PATH environment variable
+# the lower it is the earlier in the path it is
 # -------------------------------------------------------------------
 
 # set PATH so it includes user's private bin if it exists
@@ -29,14 +30,24 @@ if [ -d ~/bin ] ; then
     PATH="~/bin:${PATH}"
 fi
 
-# set PATH so it includes /usr/local/bin if it exists
-if [ -d /usr/local/bin ] ; then
-	PATH="/usr/local/bin:${PATH}"
+# set PATH so it includes /usr/sbin if it exists
+if [ -d /usr/sbin ] ; then
+	PATH="/usr/sbin:${PATH}"
+fi
+
+# set PATH so it includes /sbin if it exists
+if [ -d /sbin ] ; then
+	PATH="/sbin:${PATH}"
 fi
 
 # set PATH so it includes /usr/local/sbin if it exists
 if [ -d /usr/local/sbin ] ; then
 	PATH="/usr/local/sbin:${PATH}"
+fi
+
+# set PATH so it includes /usr/local/bin if it exists
+if [ -d /usr/local/bin ] ; then
+	PATH="/usr/local/bin:${PATH}"
 fi
 
 HOSTNAME=$(hostname)

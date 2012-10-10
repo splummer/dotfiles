@@ -41,7 +41,10 @@ source $ZSH/oh-my-zsh.sh
 PATH=/usr/X11/bin:$PATH     # X11 Stuff
 PATH=/opt/local/bin:$PATH   # MacPorts
 PATH=/opt/local/sbin:$PATH  # MacPorts
+PATH=/usr/local/sbin:$PATH  # User binaries
 PATH=/usr/local/bin:$PATH   # User binaries
+PATH=$PATH:/usr/sbin        # System sbin
+PATH=$PATH:/sbin		    # User binaries
 PATH=$HOME/bin:$PATH        # Personal binaries
 PATH=/opt/local/libexec/gnubin:$PATH	# MacPorts gnu coreutils links
 
