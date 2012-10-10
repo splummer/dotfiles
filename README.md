@@ -84,3 +84,10 @@ Then add these symlinks:
 Finally, to enable the hidden command line tool `subl` add this symlink:
 
     ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+
+## Other Tips, Tricks, and Miscellany
+
+Much of what I fond was copied from the following sources
+
+  * https://github.com/zan5hin/dotfiles
+  * http://seanmmcdaniel.com/2011/09/zsh-on-os-x/
