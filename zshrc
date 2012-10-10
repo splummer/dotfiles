@@ -34,10 +34,6 @@ plugins=(git osx macports)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-# Color listing
-eval $(dircolors ~/.dir_colors)
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-
 
 # Path additions
 # List items in the reverse order you want them to appear in $PATH (i.e. last
@@ -47,12 +43,17 @@ PATH=/opt/local/bin:$PATH   # MacPorts
 PATH=/opt/local/sbin:$PATH  # MacPorts
 PATH=/usr/local/bin:$PATH   # User binaries
 PATH=$HOME/bin:$PATH        # Personal binaries
+PATH=/opt/local/libexec/gnubin:$PATH	# MacPorts gnu coreutils links
 
 export PATH
 
 export EDITOR=vim # Set editor to vim for things that care
 
-List directory contents after a 'cd'
+# Color listing
+eval $(dircolors ~/.dir_colors)
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+# List directory contents after a 'cd'
 function chpwd() {
      emulate -LR zsh
          ls -F
