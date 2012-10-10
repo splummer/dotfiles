@@ -32,7 +32,6 @@ set report=0 "show report on changes to file, 0 means all changes
  Bundle 'tpope/vim-fugitive'
  Bundle 'Lokaltog/vim-easymotion'
  Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
- Bundle 'tpope/vim-rails.git'
  Bundle 'vim-colors-solarized'
  Bundle 'vim-powerline'
  " vim-scripts repos
