@@ -7,6 +7,25 @@
 # -------------------------------------------------------------------
 # My General purpose aliases
 # -------------------------------------------------------------------
+alias -='cd -'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias 1='cd -'
+alias 2='cd +2'
+alias 3='cd +3'
+alias 4='cd +4'
+alias 5='cd +5'
+alias 6='cd +6'
+alias 7='cd +7'
+alias 8='cd +8'
+alias 9='cd +9'
+alias _=sudo
+alias afind='ack-grep -il'
+alias cd..='cd ..'
+alias cd...='cd ../..'
+alias cd....='cd ../../..'
+alias cd.....='cd ../../../..'
+alias cd/='cd /'
 export LS_OPTIONS='--color'
 alias lh='ls $LS_OPTIONS -aF | egrep "^\."'
 alias ls='ls $LS_OPTIONS -F'
