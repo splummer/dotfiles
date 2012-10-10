@@ -1,3 +1,4 @@
+set term=xterm-256color		"Force color xterm
 syntax enable
 set nocp 			"We want to use vim not vi
 set nocompatible 		"be iMproved
