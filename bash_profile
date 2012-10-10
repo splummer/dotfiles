@@ -66,6 +66,6 @@ if [ -d /opt/local/libexec/gnubin ] ; then
 fi
 
 HOSTNAME=$(hostname)
-if [ "${HOSTNAME:0:6}" === "tools" ]; then
+if [ "${HOSTNAME:0:6}" == "tools." ]; then
 	case "$-" in *i*) byobu-launcher && exit 0; esac;
 fi
