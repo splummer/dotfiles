@@ -32,3 +32,7 @@
 	path = vim/bundle/vim-powerline
 	url = git://github.com/Lokaltog/vim-powerline
 	ignore = dirty
+[submodule "fonts/sourceCodePro-Powerline"]
+	path = fonts/sourceCodePro-Powerline
+	url = git://github.com/ryanmcilmoyl/sourceCodePro-Powerline.git
+	ignore = dirty
