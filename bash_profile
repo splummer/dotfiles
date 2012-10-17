@@ -75,9 +75,9 @@ fi
 # Launch screen or byobu if they are available and we are on a remote session
 # -------------------------------------------------------------------
 
-if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists byobu-launcher ; then
-        case "$-" in *i*) byobu-launcher && exit 0; esac;
-fi
+#if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists byobu-launcher ; then
+#        case "$-" in *i*) byobu-launcher && exit 0; esac;
+#fi
 
 if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists screen ; then
         exec screen -x -D -R
