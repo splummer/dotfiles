@@ -47,6 +47,7 @@ PATH=$PATH:/usr/sbin        # System sbin
 PATH=$PATH:/sbin		    # User binaries
 PATH=$HOME/bin:$PATH        # Personal binaries
 PATH=/opt/local/libexec/gnubin:$PATH	# MacPorts gnu coreutils links
+PATH=/usr/local/git/bin:$PATH	# Git Binaries from official git project
 
 export PATH
 
