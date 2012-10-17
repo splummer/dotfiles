@@ -18,15 +18,6 @@ else
 fi
 
 # -------------------------------------------------------------------
-# Source my bashrc file
-# -------------------------------------------------------------------
-
-# get the aliases and functions
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
-fi
-
-# -------------------------------------------------------------------
 # Build a PATH environment variable
 # the lower it is the earlier in the path it is
 # -------------------------------------------------------------------
@@ -69,6 +60,15 @@ fi
 # set PATH so it includes /opt/local/libexec/gnubin if it exists
 if [ -d /opt/local/libexec/gnubin ] ; then
 	PATH="/opt/local/libexec/gnubin:${PATH}"
+fi
+
+# -------------------------------------------------------------------
+# Source my bashrc file
+# -------------------------------------------------------------------
+
+# get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
 fi
 
 # -------------------------------------------------------------------
