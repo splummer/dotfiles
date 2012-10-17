@@ -70,8 +70,10 @@ fi
 # configure how history works
 HISTCONTROL=ignoredups                         		# ignore the line if it matches previous line
 HISTFILESIZE=20000                             		# size of the history file cf. also shopt -s histappend
-HISTSIZE=1000                                  		# size of the run-time history list
-HISTIGNORE=ls:ll:la:l:cd:pwd:exit:mc:su:df:clear 	# do not put these in history file
+HISTSIZE=10000                                		# size of the run-time history list
+shopt -s histappend									# Combine multiline commands into one in history
+shopt -s cmdhist									# save all lines of a multiple-line command in the same history entry
+HISTIGNORE=ls:ll:la:l:pwd:exit:mc:df:clear		    # do not put these in history file
 
 # -------------------------------------------------------------------
 # Color

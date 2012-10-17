@@ -31,6 +31,9 @@ alias ll='ls $LS_OPTIONS -lhF'
 alias lll='ls $LS_OPTIONS -laF'
 alias sl='ls $LS_OPTIONS' # often screw this up
 
+# Show me the size (sorted) of only the folders in this directory
+alias folders="find . -maxdepth 1 -type d -print | xargs du -sh | sort -rn"
+
 # Set vi to open vim for systems that have both
 vi='vim'
 
