@@ -7,6 +7,17 @@
 # -------------------------------------------------------------------
 
 # -------------------------------------------------------------------
+# Set some variables that may be useful
+# -------------------------------------------------------------------
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  SESSION_TYPE=remote/ssh
+else
+  case $(ps -o comm= -p $PPID) in
+    sshd|*/sshd) SESSION_TYPE=remote/ssh;;
+  esac
+fi
+
+# -------------------------------------------------------------------
 # Print System Status
 # -------------------------------------------------------------------
 printf "System Status:\n"; uptime; printf "\n"
@@ -65,7 +76,19 @@ if [ -d /opt/local/libexec/gnubin ] ; then
 	PATH="/opt/local/libexec/gnubin:${PATH}"
 fi
 
-HOSTNAME=$(hostname)
-if [ "${HOSTNAME:0:6}" == "tools." ]; then
-	case "$-" in *i*) byobu-launcher && exit 0; esac;
+# -------------------------------------------------------------------
+# Launch screen or byobu if they are available and we are on a remote session
+# -------------------------------------------------------------------
+
+if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists byobu-launcher ; then
+        case "$-" in *i*) byobu-launcher && exit 0; esac;
 fi
+
+if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists screen ; then
+        case "$-" in *i*) screen && exit 0; esac;
+fi
+
+#HOSTNAME=$(hostname)
+#if [ "${HOSTNAME:0:6}" == "tools." ]; then
+#	case "$-" in *i*) byobu-launcher && exit 0; esac;
+#fi

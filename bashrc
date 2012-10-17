@@ -82,3 +82,10 @@ export LESS_TERMCAP_us=$'\E[01;32m'      # begin underline
 export EDITOR=vi
 export VISUAL=vim
 export PAGER=/usr/bin/less
+
+# -------------------------------------------------------------------
+# Functions
+# -------------------------------------------------------------------
+command_exists () {
+    type -P "$1" &> /dev/null ;
+}
