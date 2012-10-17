@@ -80,7 +80,7 @@ if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists byobu-launcher ; then
 fi
 
 if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists screen ; then
-        exec screen -xRR
+        exec screen -x -D -R
 fi
 
 #HOSTNAME=$(hostname)
