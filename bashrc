@@ -33,14 +33,40 @@ if [ -f ~/.dotfiles/git-completion.bash ]; then
 fi
 GIT_PS1_SHOWDIRTYSTATE=1
 
-# -------------------------------------------------------------------
-# Prompts
-# -------------------------------------------------------------------
-# set prompt: user@host working directory new line $ using colors (copied from cygwin profile)
-# also set title to user@host and display current directory
+# If running interactively, then:
+if [ "$PS1" ]; then
 
-PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\H \[\e[33m\]\w\[\e[0m\] $(__git_ps1 "(%s)") \n$\[\033]0;\u@\h:\w\007\] '
+	# -------------------------------------------------------------------
+	# Print System Status
+	# -------------------------------------------------------------------
+	printf "System Status:\n"; uptime; printf "\n"
 
+	# -------------------------------------------------------------------
+	# Prompts
+	# -------------------------------------------------------------------
+	# set prompt: user@host working directory new line $ using colors (copied from cygwin profile)
+	# also set title to user@host and display current directory
+	PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\H \[\e[33m\]\w\[\e[0m\] $(__git_ps1 "(%s)") \n$\[\033]0;\u@\h:\w\007\] '
+
+    # stuff for 'screen'
+	# Login greeting ------------------
+	if [ ! $SHOWED_SCREEN_MESSAGE ]; then
+		detached_screens=`screen -list | sed -n 's/^\(.*\)(Detached)$/|\1|/gp'`
+		if [ ! -z "$detached_screens" ]; then
+			echo "+---------------------------------------+"
+			echo "| Detached screens are available:       |"
+			echo -n "$detached_screens"
+			echo
+			echo "+---------------------------------------+"
+		else
+			echo "+-----------------------------------------+"
+			echo "[ There are no detached screens available ]"
+			echo "+-----------------------------------------+"
+		fi
+		export SHOWED_SCREEN_MESSAGE="true"
+	fi
+
+fi
 # configure how history works
 HISTCONTROL=ignoredups                         		# ignore the line if it matches previous line
 HISTFILESIZE=20000                             		# size of the history file cf. also shopt -s histappend
