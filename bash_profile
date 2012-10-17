@@ -80,7 +80,7 @@ if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists byobu-launcher ; then
 fi
 
 if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists screen ; then
-        case "$-" in *i*) screen && exit 0; esac;
+        exec screen -xRR
 fi
 
 #HOSTNAME=$(hostname)
