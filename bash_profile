@@ -79,7 +79,7 @@ fi
 #        case "$-" in *i*) byobu-launcher && exit 0; esac;
 #fi
 
-if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists screen ; then
+if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists screen $$ [ "$TERM"!="screen" ]; then
         exec screen -x -D -R
 fi
 
