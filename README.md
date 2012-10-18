@@ -86,6 +86,8 @@ Much of what I did was copied from the following sources
 
   * https://github.com/zan5hin/dotfiles
   * http://seanmmcdaniel.com/2011/09/zsh-on-os-x/
+  * [SSH-Agent screen fix](http://old.tamasrepus.hotnudiegirls.com/pages/GNU+screen+and+SSH+agent+forwarding)
+  * [And Another Screen SSH-Agent Fix](http://www.deadman.org/sshscreen.php)
 
 ### Fonts
 
