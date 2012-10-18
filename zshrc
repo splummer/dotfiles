@@ -51,6 +51,12 @@ PATH=/usr/local/git/bin:$PATH	# Git Binaries from official git project
 
 export PATH
 
+# -------------------------------------------------------------------
+# source my aliases and functions
+# -------------------------------------------------------------------
+source ${HOME}/.dotfiles/aliases.zsh
+source ${HOME}/.dotfiles/functions.zsh
+
 export EDITOR=vim # Set editor to vim for things that care
 export PAGER=less # Less is better than more
 
@@ -68,9 +74,3 @@ export LESS_TERMCAP_se=$'\E[0m'          # end standout-mode
 export LESS_TERMCAP_so=$'\E[01;44;33m'   # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'          # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'      # begin underline
-
-# -------------------------------------------------------------------
-# source my aliases and functions
-# -------------------------------------------------------------------
-source ${HOME}/.dotfiles/aliases.zsh
-source ${HOME}/.dotfiles/functions.zsh

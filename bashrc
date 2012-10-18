@@ -17,6 +17,11 @@ if [ -f .bash_aliases ]; then
 	. .bash_aliases
 fi
 
+# source my functions file
+if [ -f ~/.dotfiles/bash_functions ]; then
+	. ~/.dotfiles/bash_functions
+fi
+
 # -------------------------------------------------------------------
 # stuff for bash-completion and git-completion
 # -------------------------------------------------------------------
@@ -110,31 +115,3 @@ export LESS_TERMCAP_us=$'\E[01;32m'      # begin underline
 export EDITOR=vi
 export VISUAL=vim
 export PAGER=/usr/bin/less
-
-# -------------------------------------------------------------------
-# Functions
-# -------------------------------------------------------------------
-command_exists () {
-    type -P "$1" &> /dev/null ;
-}
-
-extract () {
-   if [ -f $1 ] ; then
-       case $1 in
-           *.tar.bz2)   tar xvjf $1    ;;
-           *.tar.gz)    tar xvzf $1    ;;
-           *.bz2)       bunzip2 $1     ;;
-           *.rar)       unrar x $1       ;;
-           *.gz)        gunzip $1      ;;
-           *.tar)       tar xvf $1     ;;
-           *.tbz2)      tar xvjf $1    ;;
-           *.tgz)       tar xvzf $1    ;;
-           *.zip)       unzip $1       ;;
-           *.Z)         uncompress $1  ;;
-           *.7z)        7z x $1        ;;
-           *)           echo "don't know how to extract '$1'..." ;;
-       esac
-   else
-       echo "'$1' is not a valid file!"
-   fi
- }
