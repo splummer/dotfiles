@@ -50,7 +50,7 @@ if [ "$PS1" ]; then
 
     # stuff for 'screen'
 	# Login greeting ------------------
-	if [ ! $SHOWED_SCREEN_MESSAGE ]; then
+	if [ ! $SHOWED_SCREEN_MESSAGE ] && command_exists screen ; then
 		detached_screens=`screen -list | sed -n 's/^\(.*\)(Detached)$/|\1|/gp'`
 		if [ ! -z "$detached_screens" ]; then
 			echo "+---------------------------------------+"
