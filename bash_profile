@@ -79,8 +79,8 @@ fi
 #        case "$-" in *i*) byobu-launcher && exit 0; esac;
 #fi
 
-if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists screen $$ [ "$TERM"!="screen" ]; then
-        exec screen -x -D -R
+if [ "$SESSION_TYPE"=="remote/ssh" ] && command_exists screen && [ "$TERM"!="screen" ] && [ -f ~/.dotfiles/bin/scratch ]; then
+        ~/.dotfiles/bin/scratch
 fi
 
 #HOSTNAME=$(hostname)
