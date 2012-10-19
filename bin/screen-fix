@@ -1,6 +1,6 @@
 #!/bin/bash
 # Reimports certain env variables into the current screen session
 
-if [ -f "~/.screen/session-variables" ]; then
-  source "~/.screen/session-variables"
+if [ -f ~/.screen/session-variables ]; then
+  source ~/.screen/session-variables
 fi
