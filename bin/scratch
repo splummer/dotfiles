@@ -1,7 +1,7 @@
 #!/bin/bash
 # Wrapper script for screen
 
-if [ -n "$SSH_CLIENT" ]; then
+if [ "$SESSION_TYPE"=="remote/ssh" ]; then
   mkdir -p "$HOME/.screen"
 
   # Variables to save
