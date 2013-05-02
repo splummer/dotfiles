@@ -29,7 +29,7 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx macports yum)
+plugins=(git brew virtualenv osx pip yum)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,17 +37,16 @@ source $ZSH/oh-my-zsh.sh
 
 # Path additions
 # List items in the reverse order you want them to appear in $PATH (i.e. last
-# items appear first ).
+# items appear first ).			
+PATH=/usr/local/share/python:$PATH	#Brew Python scripts
 PATH=/usr/X11/bin:$PATH     # X11 Stuff
-PATH=/opt/local/bin:$PATH   # MacPorts
-PATH=/opt/local/sbin:$PATH  # MacPorts
 PATH=/usr/local/sbin:$PATH  # User binaries
 PATH=/usr/local/bin:$PATH   # User binaries
 PATH=$PATH:/usr/sbin        # System sbin
 PATH=$PATH:/sbin		    # User binaries
 PATH=$HOME/bin:$PATH        # Personal binaries
-PATH=/opt/local/libexec/gnubin:$PATH	# MacPorts gnu coreutils links
 PATH=/usr/local/git/bin:$PATH	# Git Binaries from official git project
+PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH	# brew gnu coreutils links
 
 export PATH
 
@@ -59,6 +58,11 @@ source ${HOME}/.dotfiles/functions.zsh
 
 export EDITOR=vim # Set editor to vim for things that care
 export PAGER=less # Less is better than more
+
+# -------------------------------------------------------------------
+# Set virtualenv to always use distribute.
+# -------------------------------------------------------------------
+export VIRTUALENV_DISTRIBUTE=true
 
 # Color listing
 eval $(dircolors ~/.dir_colors)
