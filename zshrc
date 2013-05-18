@@ -38,6 +38,7 @@ source $ZSH/oh-my-zsh.sh
 # Path additions
 # List items in the reverse order you want them to appear in $PATH (i.e. last
 # items appear first ).			
+PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH	# Postgresapp binaries
 PATH=/usr/local/share/python:$PATH	#Brew Python scripts
 PATH=/usr/X11/bin:$PATH     # X11 Stuff
 PATH=/usr/local/sbin:$PATH  # User binaries
@@ -63,6 +64,8 @@ export PAGER=less # Less is better than more
 # Set virtualenv to always use distribute.
 # -------------------------------------------------------------------
 export VIRTUALENV_DISTRIBUTE=true
+export WORKON_HOME=~/.pythonenv
+source /usr/local/share/python/virtualenvwrapper.sh
 
 # Color listing
 eval $(dircolors ~/.dir_colors)
