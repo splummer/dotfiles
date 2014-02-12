@@ -26,30 +26,40 @@ ZSH_THEME="agnoster"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
+# Load this path before plugins so that virtualenvwrapper works
+PATH=/usr/local/share/python:$PATH	#Brew Python scripts
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew virtualenv osx pip yum)
+plugins=(git brew virtualenvwrapper osx pip yum)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# -------------------------------------------------------------------
 # Path additions
 # List items in the reverse order you want them to appear in $PATH (i.e. last
-# items appear first ).			
-PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH	# Postgresapp binaries
-PATH=/usr/local/share/python:$PATH	#Brew Python scripts
+# items appear first ).
+# -------------------------------------------------------------------
+PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH	# Postgresapp binaries
 PATH=/usr/X11/bin:$PATH     # X11 Stuff
 PATH=/usr/local/sbin:$PATH  # User binaries
 PATH=/usr/local/bin:$PATH   # User binaries
 PATH=$PATH:/usr/sbin        # System sbin
 PATH=$PATH:/sbin		    # User binaries
 PATH=$HOME/bin:$PATH        # Personal binaries
-PATH=/usr/local/git/bin:$PATH	# Git Binaries from official git project
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH	# brew gnu coreutils links
 
 export PATH
+
+# -------------------------------------------------------------------
+# MANPATH
+# -------------------------------------------------------------------
+MANPATH=/Applications/Postgres.app/Contents/Versions/9.3/share/man:$MANPATH
+
+export MANPATH
 
 # -------------------------------------------------------------------
 # source my aliases and functions
@@ -63,9 +73,9 @@ export PAGER=less # Less is better than more
 # -------------------------------------------------------------------
 # Set virtualenv to always use distribute.
 # -------------------------------------------------------------------
-export VIRTUALENV_DISTRIBUTE=true
-export WORKON_HOME=~/.pythonenv
-source /usr/local/share/python/virtualenvwrapper.sh
+#export VIRTUALENV_DISTRIBUTE=false
+#export WORKON_HOME=~/.pythonenv
+#source /usr/local/share/python/virtualenvwrapper.sh
 
 # Color listing
 eval $(dircolors ~/.dir_colors)
@@ -81,3 +91,12 @@ export LESS_TERMCAP_se=$'\E[0m'          # end standout-mode
 export LESS_TERMCAP_so=$'\E[01;44;33m'   # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'          # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'      # begin underline
+
+# -------------------------------------------------------------------
+# ZSH Syntax highlighting:
+# -------------------------------------------------------------------
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
