@@ -26,13 +26,16 @@ ZSH_THEME="agnoster"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
-# Load this path before plugins so that virtualenvwrapper works
-PATH=/usr/local/share/python:$PATH	#Brew Python scripts
+# -------------------------------------------------------------------
+# Set virtualenv to always use distribute.
+# -------------------------------------------------------------------
+VIRTUALENV_PYTHON=/usr/local/bin/python3
+VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew virtualenvwrapper osx pip yum)
+plugins=(osx systemadmin brew yum git virtualenv virtualenvwrapper zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -70,12 +73,6 @@ source ${HOME}/.dotfiles/functions.zsh
 export EDITOR=vim # Set editor to vim for things that care
 export PAGER=less # Less is better than more
 
-# -------------------------------------------------------------------
-# Set virtualenv to always use distribute.
-# -------------------------------------------------------------------
-#export VIRTUALENV_DISTRIBUTE=false
-#export WORKON_HOME=~/.pythonenv
-#source /usr/local/share/python/virtualenvwrapper.sh
 
 # Color listing
 eval $(dircolors ~/.dir_colors)
@@ -92,11 +89,6 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'   # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'          # end underline
 export LESS_TERMCAP_us=$'\E[01;32m'      # begin underline
 
-# -------------------------------------------------------------------
-# ZSH Syntax highlighting:
-# -------------------------------------------------------------------
-export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+#export PATH="/usr/local/heroku/bin:$PATH"
