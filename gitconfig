@@ -17,10 +17,9 @@
 	st = status
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+	prompt = false
 [diff]
 	tool = Kaleidoscope
-[difftool]
-	prompt = false
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
@@ -28,3 +27,6 @@
 	prompt = false
 [merge]
 	tool = Kaleidoscope
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
