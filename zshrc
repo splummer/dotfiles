@@ -46,7 +46,7 @@ source $ZSH/oh-my-zsh.sh
 # List items in the reverse order you want them to appear in $PATH (i.e. last
 # items appear first ).
 # -------------------------------------------------------------------
-PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH	# Postgresapp binaries
+PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH	# Postgresapp binaries
 PATH=/usr/X11/bin:$PATH     # X11 Stuff
 PATH=/usr/local/sbin:$PATH  # User binaries
 PATH=/usr/local/bin:$PATH   # User binaries
