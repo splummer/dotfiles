@@ -55,21 +55,21 @@ if [ "$PS1" ]; then
 
     # stuff for 'screen'
 	# Login greeting ------------------
-	if [ ! $SHOWED_SCREEN_MESSAGE ] && command_exists screen ; then
-		detached_screens=`screen -list | sed -n 's/^\(.*\)(Detached)$/|\1|/gp'`
-		if [ ! -z "$detached_screens" ]; then
-			echo "+---------------------------------------+"
-			echo "| Detached screens are available:       |"
-			echo -n "$detached_screens"
-			echo
-			echo "+---------------------------------------+"
-		else
-			echo "+-----------------------------------------+"
-			echo "[ There are no detached screens available ]"
-			echo "+-----------------------------------------+"
-		fi
-		export SHOWED_SCREEN_MESSAGE="true"
-	fi
+#	if [ ! $SHOWED_SCREEN_MESSAGE ] && command_exists screen ; then
+#		detached_screens=`screen -list | sed -n 's/^\(.*\)(Detached)$/|\1|/gp'`
+#		if [ ! -z "$detached_screens" ]; then
+#			echo "+---------------------------------------+"
+#			echo "| Detached screens are available:       |"
+#			echo -n "$detached_screens"
+#			echo
+#			echo "+---------------------------------------+"
+#		else
+#			echo "+-----------------------------------------+"
+#			echo "[ There are no detached screens available ]"
+#			echo "+-----------------------------------------+"
+#		fi
+#		export SHOWED_SCREEN_MESSAGE="true"
+#	fi
 
 fi
 # configure how history works
