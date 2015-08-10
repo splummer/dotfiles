@@ -34,6 +34,9 @@ alias sl='ls $LS_OPTIONS' # often screw this up
 # Show me the size (sorted) of only the folders in this directory
 alias folders="find . -maxdepth 1 -type d -print | xargs du -sh | sort -rn"
 
+# Show me all the large files from here down in the file system
+alias findlarge="find / -type f -size +10M -exec ls -lh {} \;"
+
 # Set vi to open vim for systems that have both
 vi='vim'
 

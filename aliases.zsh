@@ -15,3 +15,6 @@ alias pipupdateall='pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xarg
 # Quick way to rebuild the Launch Services database and get rid
 # of duplicates in the Open With submenu.
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+
+# Show me all the large files from here down in the file system
+alias findlarge='find / -type f -size +10M -exec ls -lh {} \;'
