@@ -18,3 +18,6 @@ alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/
 
 # Show me all the large files from here down in the file system
 alias findlarge='find / -type f -size +10M -exec ls -lh {} \;'
+
+# Show me the size (sorted) of only the folders in this directory
+alias folders='find . -maxdepth 1 -type d -print | xargs du -sh | sort -rn'

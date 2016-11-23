@@ -66,3 +66,7 @@ nosetests.xml
 
 # Translations
 *.mo
+
+# Editor files
+*.sublime-project
+*.sublime-workspace
