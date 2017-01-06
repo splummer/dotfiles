@@ -3,7 +3,7 @@ easily.
 
 ##Installation:
 
-    git clone git://github.com/splummer/dotfiles.git ~/.dotfiles
+    git clone git@github.com:splummer/dotfiles.git
 	
 ## Updating
 
