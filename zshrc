@@ -35,7 +35,7 @@ VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx systemadmin brew yum git virtualenv virtualenvwrapper zsh-syntax-highlighting)
+plugins=(osx systemadmin yum git virtualenv virtualenvwrapper zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 

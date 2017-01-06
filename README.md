@@ -3,7 +3,7 @@ easily.
 
 ##Installation:
 
-    git clone git://github.com/splummer/dotfiles.git ~/.dotfiles
+    git clone git@github.com:splummer/dotfiles.git
 	
 ## Updating
 
@@ -11,12 +11,14 @@ easily.
     git pull
     git submodule init
     git submodule update
-    
+  
 
 ## zsh
 For zsh configuration create the following symlink:
 
 	ln -s ~/.dotfiles/zshrc ~/.zshrc
+    ln -s ~/.dotfiles/oh-my-zsh/ ~/.oh-my-zsh
+    ln -s ~/.dotfiles/dircolors-solarized/dircolors.256dark ~/.dir_colors
 			
 ## Vim
 For Vim configuration and use, create the following symlinks:
@@ -53,12 +55,21 @@ following symlinks:
     ln -s ~/.dotfiles/bash_profile ~/.bash_profile
     ln -s ~/.dotfiles/bashrc ~/.bashrc
     ln -s ~/.dotfiles/bash_aliases ~/.bash_aliases
+    ln -s ~/.dotfiles/dircolors-solarized/dircolors.256dark ~/.dir_colors
 
 ## Git
 For Git configuration and global ignore files, create these symlinks:
 
     ln -s ~/.dotfiles/gitconfig ~/.gitconfig
     ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
+    ln -s ~/.dotfiles/git-completion.bash ~/.git-completion.bash
+
+## Other stuff
+
+    ln -s ~/.dotfiles/screenrc ~/.screenrc
+    ln -s ~/.dotfiles/byobu ~/.byobu
+    ln -s ~/.dotfiles/curlrc ~/.curlrc
+
 
 
 ## Sublime Text 2 (subl)
