@@ -4,6 +4,12 @@ easily.
 ##Installation:
 
     git clone git@github.com:splummer/dotfiles.git
+    install-links.sh
+    chsh -s $(which zsh)
+
+Open a new terminal, install brew http://brew.sh if you haven't already.
+
+    install.sh
 	
 ## Updating
 
