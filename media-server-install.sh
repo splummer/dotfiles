@@ -23,7 +23,6 @@ brew cask install sonarr
 brew cask install sabnzbd
 brew cask install couchpotato
 brew cask install alfred
-brew cask install bbedit
 brew cask install istat-menus
 brew cask install makemkv
 brew cask install 1password
