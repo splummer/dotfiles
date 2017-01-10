@@ -8,6 +8,7 @@ brew install coreutils
 brew install python3
 brew install git
 brew install libdvdcss
+brew install mas
 
 # some fonts
 brew cask install font-inconsolata
@@ -28,8 +29,6 @@ brew cask install google-drive
 brew cask install dash
 brew cask install the-unarchiver
 brew cask install 1password
-brew cask install paparazzi
-brew cask install cleanmymac
 brew cask install cheatsheet
 brew cask install daisydisk
 brew cask install kindle
@@ -43,6 +42,7 @@ brew cask install track-o-bot
 brew cask install visual-studio-code
 brew cask install handbrake
 brew cask install rcdefaultapp
+brew cask install vuescan
 
 # some quicklook plugins
 brew cask install qlcolorcode
@@ -61,3 +61,18 @@ brew cask install wordservice
 # some pip stuff
 pip3 install virtualenv
 pip3 install virtualenvwrapper
+
+# use mas to install apps from the Mac AppStore
+mas install ColorWell
+mas install Mactracker
+mas install Moom
+mas install Todoist
+mas install Pages
+mas install Deliveries
+mas install Numbers
+mas install Paprika\ Recipe\ Manager
+mas install Microsoft\ Remote\ Desktop
+mas install Keynote
+mas install iMovie
+mas install Fantastical\ 2
+mas install Patterns

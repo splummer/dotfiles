@@ -15,3 +15,7 @@ ln -s ~/.dotfiles/git-completion.bash ~/.git-completion.bash
 ln -s ~/.dotfiles/screenrc ~/.screenrc
 ln -s ~/.dotfiles/byobu ~/.byobu
 ln -s ~/.dotfiles/curlrc ~/.curlrc
+ln -s ~/.dotfiles/puppet-lint.rc ~/.puppet-lint.rc
+
+# Make Library visible
+chflags nohidden ~/Library/
