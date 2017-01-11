@@ -8,8 +8,12 @@ brew install coreutils
 brew install python3
 brew install git
 brew install libdvdcss
-brew install mas
+brew install handbrake
 brew install ffmpeg
+brew install mkvtoolnix
+brew install mp4v2
+brew install mplayer
+brew install mas
 
 # some fonts
 brew cask install font-inconsolata
@@ -29,3 +33,7 @@ brew cask install 1password
 brew cask install the-unarchiver
 brew cask install macpar-deluxe
 brew cask install visual-studio-code
+
+# finally install Don Melton's Transcoding scripts
+# https://github.com/donmelton/video_transcoding
+sudo gem install video_transcoding

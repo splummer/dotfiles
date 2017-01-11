@@ -8,6 +8,11 @@ brew install coreutils
 brew install python3
 brew install git
 brew install libdvdcss
+brew install handbrake
+brew install ffmpeg
+brew install mkvtoolnix
+brew install mp4v2
+brew install mplayer
 brew install mas
 
 # some fonts
@@ -76,3 +81,7 @@ mas install Keynote
 mas install iMovie
 mas install Fantastical\ 2
 mas install Patterns
+
+# finally install Don Melton's Transcoding scripts
+# https://github.com/donmelton/video_transcoding
+sudo gem install video_transcoding
