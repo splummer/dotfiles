@@ -48,6 +48,7 @@ brew cask install visual-studio-code
 brew cask install handbrake
 brew cask install rcdefaultapp
 brew cask install vuescan
+brew cask install makemkv
 
 # some quicklook plugins
 brew cask install qlcolorcode
