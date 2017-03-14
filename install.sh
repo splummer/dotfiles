@@ -3,7 +3,7 @@
 # add some taps
 brew tap caskroom/fonts
 
-# Install some command lines tools
+# Install some command line tools
 brew install coreutils
 brew install python3
 brew install git
@@ -14,6 +14,7 @@ brew install mkvtoolnix
 brew install mp4v2
 brew install mplayer
 brew install mas
+brew install ctags
 
 # some fonts
 brew cask install font-inconsolata
@@ -47,8 +48,11 @@ brew cask install track-o-bot
 brew cask install visual-studio-code
 brew cask install handbrake
 brew cask install rcdefaultapp
+brew cask install virtualbox
+brew cask install vmware-fusion
 brew cask install vuescan
 brew cask install makemkv
+brew cask install logitech-gaming-software
 
 # some quicklook plugins
 brew cask install qlcolorcode
