@@ -62,6 +62,11 @@ if [ -d /opt/local/libexec/gnubin ] ; then
 	PATH="/opt/local/libexec/gnubin:${PATH}"
 fi
 
+# set PATH so it includes /opt/local/libexec/gnubin if it exists
+if [ -d /opt/puppetlabs/bin/ ] ; then
+	        PATH="/opt/puppetlabs/bin/:${PATH}"
+fi
+
 # -------------------------------------------------------------------
 # Source my bashrc file
 # -------------------------------------------------------------------

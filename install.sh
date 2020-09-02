@@ -15,6 +15,7 @@ brew install mp4v2
 brew install mplayer
 brew install mas
 brew install ctags
+brew install pyenv
 
 # some fonts
 brew cask install font-inconsolata
@@ -53,6 +54,10 @@ brew cask install vmware-fusion
 brew cask install vuescan
 brew cask install makemkv
 brew cask install logitech-gaming-software
+brew cask install discord
+brew cask install gas-mask
+brew cask install tripmode
+brew cask install airtame
 
 # some quicklook plugins
 brew cask install qlcolorcode

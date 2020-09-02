@@ -6,6 +6,13 @@ alias ll='ls $LS_OPTIONS -lhF'
 alias lll='ls $LS_OPTIONS -laF'
 alias sl='ls $LS_OPTIONS' # often screw this up
 
+
+# gam aliases
+export GAMCFGDIR="~/bin/GAMConfig"
+alias cdgam='/Users/plummer/bin/GAMWorking'
+alias gam='/Users/plummer/bin/gam/gam/gam'
+alias gam3='/Users/plummer/bin/gamadv-xtd3/gam'
+
 # Set vi to open vim for systems that have both
 vi='vim'
 

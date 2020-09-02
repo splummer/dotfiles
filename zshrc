@@ -26,16 +26,27 @@ ZSH_THEME="agnoster"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
+
 # -------------------------------------------------------------------
 # Set virtualenv to always use distribute.
 # -------------------------------------------------------------------
-VIRTUALENV_PYTHON=/usr/local/bin/python3
-VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+#VIRTUALENV_PYTHON=/usr/local/opt/pyenv/shims/python
+#VIRTUALENVWRAPPER_PYTHON=/usr/local/opt/pyenv/shims/python
+
+
+# If you use the default PYENV_ROOT they are removed with every brew upgrade
+# The pyenv plugin forces it to use brew home which is bad.
+PYENV_ROOT=~/.pyenv
+export PYENV_ROOT
+eval "$(pyenv init - zsh)"
+
+pyenv virtualenvwrapper
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx systemadmin yum git virtualenv virtualenvwrapper zsh-syntax-highlighting)
+plugins=(osx systemadmin yum git virtualenv zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -50,6 +61,7 @@ PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH	# Postgresapp
 PATH=/usr/X11/bin:$PATH     # X11 Stuff
 PATH=/usr/local/sbin:$PATH  # User binaries
 PATH=/usr/local/bin:$PATH   # User binaries
+PATH=/usr/local/bin:$PATH   # pyenv shims
 PATH=$PATH:/usr/sbin        # System sbin
 PATH=$PATH:/sbin		    # User binaries
 PATH=$HOME/bin:$PATH        # Personal binaries
