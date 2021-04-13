@@ -65,7 +65,9 @@ PATH=/usr/local/bin:$PATH   # pyenv shims
 PATH=$PATH:/usr/sbin        # System sbin
 PATH=$PATH:/sbin		    # User binaries
 PATH=$HOME/bin:$PATH        # Personal binaries
+PATH=/usr/local/lib/ruby/gems/2.7.0/bin:$PATH # ruby gem install path from brew-gem 'brew gem install <gemname>'
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH	# brew gnu coreutils links
+
 
 export PATH
 
